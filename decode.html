@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./decode.css" />
+    <link rel="stylesheet" href="./index.css">
+    <title>Pocket .ally</title>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body x-data="{ tab : 'decode'}">
+    <div class="decode">
+      <div class="dashboard10">
+        <div class="menu1">
+          <img
+            class="secondary-logo-icon6"
+            loading="lazy"
+            alt=""
+            src="./public/secondary-logo.svg"
+          />
+
+          <div class="menu-item-parent1">
+            <div
+              @click="tab = 'decode'"
+              class="nav-button"
+              :class="{'active': tab === 'decode'}"
+            >
+              <svg
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.02 20.8101H7.5C6.75 20.8101 6.2 20.7801 5.73 20.7101C2.4 20.3401 1.75 18.3601 1.75 15.0601V10.0601C1.75 6.76006 2.41 4.77006 5.76 4.40006C6.2 4.34006 6.75 4.31006 7.5 4.31006H10.96C11.37 4.31006 11.71 4.65006 11.71 5.06006C11.71 5.47006 11.37 5.81006 10.96 5.81006H7.5C6.82 5.81006 6.34 5.84006 5.95 5.89006C3.92 6.11006 3.25 6.75006 3.25 10.0601V15.0601C3.25 18.3701 3.92 19.0001 5.92 19.2301C6.34 19.2901 6.82 19.3101 7.5 19.3101H11.02C11.43 19.3101 11.77 19.6501 11.77 20.0601C11.77 20.4701 11.43 20.8101 11.02 20.8101Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M16.4995 20.8101H15.0195C14.6095 20.8101 14.2695 20.4701 14.2695 20.0601C14.2695 19.6501 14.6095 19.3101 15.0195 19.3101H16.4995C17.1795 19.3101 17.6595 19.2801 18.0495 19.2301C20.0795 19.0101 20.7495 18.3701 20.7495 15.0601V10.0601C20.7495 6.75006 20.0795 6.12006 18.0795 5.89006C17.6595 5.83006 17.1795 5.81006 16.4995 5.81006H15.0195C14.6095 5.81006 14.2695 5.47006 14.2695 5.06006C14.2695 4.65006 14.6095 4.31006 15.0195 4.31006H16.4995C17.2495 4.31006 17.7995 4.34006 18.2695 4.41006C21.5995 4.78006 22.2495 6.76006 22.2495 10.0601V15.0601C22.2495 18.3601 21.5895 20.3501 18.2395 20.7201C17.7995 20.7801 17.2495 20.8101 16.4995 20.8101Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M15 23.3101C14.59 23.3101 14.25 22.9701 14.25 22.5601V2.56006C14.25 2.15006 14.59 1.81006 15 1.81006C15.41 1.81006 15.75 2.15006 15.75 2.56006V22.5601C15.75 22.9701 15.41 23.3101 15 23.3101Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M6.69922 13.5603C6.56922 13.5603 6.43922 13.5303 6.31922 13.4803C6.19922 13.4303 6.08922 13.3603 5.98922 13.2703C5.89922 13.1703 5.81922 13.0603 5.76922 12.9403C5.71922 12.8203 5.69922 12.6903 5.69922 12.5603C5.69922 12.3003 5.80922 12.0403 5.98922 11.8503C6.35922 11.4803 7.02922 11.4803 7.40922 11.8503C7.58922 12.0403 7.69922 12.3003 7.69922 12.5603C7.69922 12.6903 7.66922 12.8203 7.61922 12.9403C7.56922 13.0603 7.49922 13.1703 7.40922 13.2703C7.30922 13.3603 7.19922 13.4303 7.07922 13.4803C6.95922 13.5303 6.82922 13.5603 6.69922 13.5603Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M10.6992 13.5603C10.5692 13.5603 10.4392 13.5303 10.3192 13.4803C10.1992 13.4303 10.0892 13.3603 9.98922 13.2703C9.89922 13.1703 9.82922 13.0603 9.76922 12.9403C9.72922 12.8203 9.69922 12.6903 9.69922 12.5603C9.69922 12.3003 9.80922 12.0403 9.98922 11.8503C10.3592 11.4803 11.0392 11.4803 11.4092 11.8503C11.5892 12.0403 11.6992 12.3003 11.6992 12.5603C11.6992 12.6903 11.6692 12.8203 11.6192 12.9403C11.5692 13.0603 11.4992 13.1703 11.4092 13.2703C11.3092 13.3603 11.1992 13.4303 11.0792 13.4803C10.9592 13.5303 10.8292 13.5603 10.6992 13.5603Z"
+                  fill="currentColor"
+                />
+              </svg>
+              <div>Decode</div>
+            </div>
+
+            <div class="menu-item9"></div>
+
+            <div
+              @click="tab = 'blog'"
+              class="nav-button"
+              :class="{'active': tab === 'blog'}"
+            >
+              <svg
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M22 10.5601V15.5601C22 20.5601 20 22.5601 15 22.5601H9C4 22.5601 2 20.5601 2 15.5601V9.56006C2 4.56006 4 2.56006 9 2.56006H14M22 10.5601H18C15 10.5601 14 9.56006 14 6.56006V2.56006M22 10.5601L14 2.56006M6.62 16.2901C6.29 15.2601 6.68 13.9901 7.75 13.6401C8.32 13.4601 9.02 13.6101 9.41 14.1601C9.78 13.5901 10.51 13.4601 11.07 13.6401C12.15 13.9901 12.53 15.2601 12.21 16.2901C11.7 17.9201 9.91 18.7701 9.41 18.7701C8.92 18.7601 7.15 17.9301 6.62 16.2901Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <div>Blog</div>
+            </div>
+
+            <div class="menu-item9"></div>
+
+            <div
+              @click="tab = 'my-profile'"
+              class="nav-button"
+              :class="{'active': tab === 'my-profile'}"
+            >
+              <svg
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.1596 12.1801C12.1296 12.1801 12.1096 12.1801 12.0796 12.1801C12.0296 12.1701 11.9596 12.1701 11.8996 12.1801C8.99961 12.0901 6.80961 9.81006 6.80961 7.00006C6.80961 4.14006 9.13961 1.81006 11.9996 1.81006C14.8596 1.81006 17.1896 4.14006 17.1896 7.00006C17.1796 9.81006 14.9796 12.0901 12.1896 12.1801C12.1796 12.1801 12.1696 12.1801 12.1596 12.1801ZM11.9996 3.31006C9.96961 3.31006 8.30961 4.97006 8.30961 7.00006C8.30961 9.00006 9.86961 10.6101 11.8596 10.6801C11.9096 10.6701 12.0496 10.6701 12.1796 10.6801C14.1396 10.5901 15.6796 8.98006 15.6896 7.00006C15.6896 4.97006 14.0296 3.31006 11.9996 3.31006Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M12.1696 23.1101C10.2096 23.1101 8.23961 22.6101 6.74961 21.6101C5.35961 20.6901 4.59961 19.4301 4.59961 18.0601C4.59961 16.6901 5.35961 15.4201 6.74961 14.4901C9.74961 12.5001 14.6096 12.5001 17.5896 14.4901C18.9696 15.4101 19.7396 16.6701 19.7396 18.0401C19.7396 19.4101 18.9796 20.6801 17.5896 21.6101C16.0896 22.6101 14.1296 23.1101 12.1696 23.1101ZM7.57961 15.7501C6.61961 16.3901 6.09961 17.2101 6.09961 18.0701C6.09961 18.9201 6.62961 19.7401 7.57961 20.3701C10.0696 22.0401 14.2696 22.0401 16.7596 20.3701C17.7196 19.7301 18.2396 18.9101 18.2396 18.0501C18.2396 17.2001 17.7096 16.3801 16.7596 15.7501C14.2696 14.0901 10.0696 14.0901 7.57961 15.7501Z"
+                  fill="currentColor"
+                />
+              </svg>
+              <div>My Profile</div>
+            </div>
+
+            <div class="menu-item9"></div>
+          </div>
+        </div>
+
+        <div
+          @click="tab = 'settings'"
+          class="nav-button"
+          :class="{'active': tab === 'settings'}"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 15.7503C9.93 15.7503 8.25 14.0703 8.25 12.0003C8.25 9.93029 9.93 8.25029 12 8.25029C14.07 8.25029 15.75 9.93029 15.75 12.0003C15.75 14.0703 14.07 15.7503 12 15.7503ZM12 9.75029C10.76 9.75029 9.75 10.7603 9.75 12.0003C9.75 13.2403 10.76 14.2503 12 14.2503C13.24 14.2503 14.25 13.2403 14.25 12.0003C14.25 10.7603 13.24 9.75029 12 9.75029Z"
+              fill="currentColor"
+            />
+            <path
+              d="M15.21 22.1903C15 22.1903 14.79 22.1603 14.58 22.1103C13.96 21.9403 13.44 21.5503 13.11 21.0003L12.99 20.8003C12.4 19.7803 11.59 19.7803 11 20.8003L10.89 20.9903C10.56 21.5503 10.04 21.9503 9.42 22.1103C8.79 22.2803 8.14 22.1903 7.59 21.8603L5.87 20.8703C5.26 20.5203 4.82 19.9503 4.63 19.2603C4.45 18.5703 4.54 17.8603 4.89 17.2503C5.18 16.7403 5.26 16.2803 5.09 15.9903C4.92 15.7003 4.49 15.5303 3.9 15.5303C2.44 15.5303 1.25 14.3403 1.25 12.8803V11.1203C1.25 9.66029 2.44 8.47029 3.9 8.47029C4.49 8.47029 4.92 8.30029 5.09 8.01029C5.26 7.72029 5.19 7.26029 4.89 6.75029C4.54 6.14029 4.45 5.42029 4.63 4.74029C4.81 4.05029 5.25 3.48029 5.87 3.13029L7.6 2.14029C8.73 1.47029 10.22 1.86029 10.9 3.01029L11.02 3.21029C11.61 4.23029 12.42 4.23029 13.01 3.21029L13.12 3.02029C13.8 1.86029 15.29 1.47029 16.43 2.15029L18.15 3.14029C18.76 3.49029 19.2 4.06029 19.39 4.75029C19.57 5.44029 19.48 6.15029 19.13 6.76029C18.84 7.27029 18.76 7.73029 18.93 8.02029C19.1 8.31029 19.53 8.48029 20.12 8.48029C21.58 8.48029 22.77 9.67029 22.77 11.1303V12.8903C22.77 14.3503 21.58 15.5403 20.12 15.5403C19.53 15.5403 19.1 15.7103 18.93 16.0003C18.76 16.2903 18.83 16.7503 19.13 17.2603C19.48 17.8703 19.58 18.5903 19.39 19.2703C19.21 19.9603 18.77 20.5303 18.15 20.8803L16.42 21.8703C16.04 22.0803 15.63 22.1903 15.21 22.1903ZM12 18.4903C12.89 18.4903 13.72 19.0503 14.29 20.0403L14.4 20.2303C14.52 20.4403 14.72 20.5903 14.96 20.6503C15.2 20.7103 15.44 20.6803 15.64 20.5603L17.37 19.5603C17.63 19.4103 17.83 19.1603 17.91 18.8603C17.99 18.5603 17.95 18.2503 17.8 17.9903C17.23 17.0103 17.16 16.0003 17.6 15.2303C18.04 14.4603 18.95 14.0203 20.09 14.0203C20.73 14.0203 21.24 13.5103 21.24 12.8703V11.1103C21.24 10.4803 20.73 9.96029 20.09 9.96029C18.95 9.96029 18.04 9.52029 17.6 8.75029C17.16 7.98029 17.23 6.97029 17.8 5.99029C17.95 5.73029 17.99 5.42029 17.91 5.12029C17.83 4.82029 17.64 4.58029 17.38 4.42029L15.65 3.43029C15.22 3.17029 14.65 3.32029 14.39 3.76029L14.28 3.95029C13.71 4.94029 12.88 5.50029 11.99 5.50029C11.1 5.50029 10.27 4.94029 9.7 3.95029L9.59 3.75029C9.34 3.33029 8.78 3.18029 8.35 3.43029L6.62 4.43029C6.36 4.58029 6.16 4.83029 6.08 5.13029C6 5.43029 6.04 5.74029 6.19 6.00029C6.76 6.98029 6.83 7.99029 6.39 8.76029C5.95 9.53029 5.04 9.97029 3.9 9.97029C3.26 9.97029 2.75 10.4803 2.75 11.1203V12.8803C2.75 13.5103 3.26 14.0303 3.9 14.0303C5.04 14.0303 5.95 14.4703 6.39 15.2403C6.83 16.0103 6.76 17.0203 6.19 18.0003C6.04 18.2603 6 18.5703 6.08 18.8703C6.16 19.1703 6.35 19.4103 6.61 19.5703L8.34 20.5603C8.55 20.6903 8.8 20.7203 9.03 20.6603C9.27 20.6003 9.47 20.4403 9.6 20.2303L9.71 20.0403C10.28 19.0603 11.11 18.4903 12 18.4903Z"
+              fill="currentColor"
+            />
+          </svg>
+          <div>Settings</div>
+        </div>
+      </div>
+
+      <!----------------------------decode section-------------------------------->
+      <div x-cloak x-show="tab === 'decode'" class="hero1">
+        <div class="hero-content1">
+          <div class="got-a-gut-container2">
+            <p class="got-a-gut2">Got a Gut Feeling?</p>
+            <p class="test-it-out4">Test It Out 🧐</p>
+          </div>
+          <div class="dashboard11">
+            <div class="rectangle-parent4">
+              <div class="frame-child24"></div>
+              <input
+                class="your-message-here2"
+                placeholder="Your message here"
+                type="text"
+              />
+            </div>
+            <button class="large-buttons8">
+              <div class="button-shape"></div>
+              <div class="let-me-know10">LET ME KNOW</div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-------------------------end of decode section---------------------------->
+
+      <!------------------------blog section-->
+      <div x-cloak x-show="tab === 'blog'"><main class="hero"></main>
+        <section class="hero-content">
+          <div class="knowledge-is-power-container">
+            <p class="knowledge-is-power">Knowledge is Power, Babe!</p>
+            <p class="save-your-favorite">Save your favorite articles ❤️</p>
+          </div>
+          <div class="dashboard9">
+            <h1 class="recommanded">Recommanded</h1>
+            <div class="article-list">
+              <div class="recommanded-articles1">
+                <div class="blog4">
+                  <div class="article-content">
+                    <img
+                      class="unsplashbhn3wwjbfzy-icon4"
+                      alt=""
+                      src="./public/unsplashbhn3wwjbfzy@2x.png"
+                    />
+
+                    <button class="article-details">
+                      <div class="relationships3">New Post</div>
+                    </button>
+                    <div class="article-actions">
+                      <div class="featherbookmark4">
+                        <img
+                          class="icon-like4"
+                          loading="lazy"
+                          alt=""
+                          src="./public/icon--like.svg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="article-title">
+                    <div class="article-description">
+                      <h3 class="unmasking-manipulation4">
+                        Unmasking Manipulation
+                      </h3>
+                      <div class="how-to-recognise-container3">
+                        <p class="how-to-recognise4">
+                          How to Recognise and Respond to
+                        </p>
+                        <p class="how-to-recognise4">Toxic Messages</p>
+                      </div>
+                    </div>
+                    <div class="date4">
+                      <div class="views4">250 views</div>
+                      <div class="article-likes">
+                        <div class="likes-indicator"></div>
+                      </div>
+                      <div class="likes4">250 likes</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blog5">
+                  <div class="article-content">
+                    <img
+                      class="unsplashbhn3wwjbfzy-icon4"
+                      alt=""
+                      src="./public/unsplashbhn3wwjbfzy1@2x.png"
+                    />
+
+                    <div class="relationships-frame">
+                      <a class="relationships4">Relationships</a>
+                    </div>
+                    <div class="article-actions">
+                      <div class="featherbookmark4">
+                        <img
+                          class="icon-like4"
+                          loading="lazy"
+                          alt=""
+                          src="./public/icon--like1.svg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="frame-parent10">
+                    <div class="unmasking-manipulation-parent2">
+                      <h3 class="unmasking-manipulation4">
+                        Empowered Communication
+                      </h3>
+                      <div class="how-to-recognise5">
+                        Setting Boundaries with Confidence
+                      </div>
+                    </div>
+                    <div class="date4">
+                      <div class="views4">250 views</div>
+                      <div class="article-likes">
+                        <div class="likes-indicator"></div>
+                      </div>
+                      <div class="likes4">250 likes</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blog5">
+                  <div class="article-content">
+                    <img
+                      class="unsplashbhn3wwjbfzy-icon4"
+                      alt=""
+                      src="./public/unsplashbhn3wwjbfzy2@2x.png"
+                    />
+
+                    <div class="relationships-frame">
+                      <div class="relationships5">Family</div>
+                    </div>
+                    <div class="article-actions">
+                      <div class="featherbookmark4">
+                        <img
+                          class="icon-like4"
+                          loading="lazy"
+                          alt=""
+                          src="./public/icon--like1.svg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="frame-parent11">
+                    <div class="article-description">
+                      <h3 class="unmasking-manipulation4">
+                        Unmasking Manipulation
+                      </h3>
+                      <div class="how-to-recognise-container3">
+                        <p class="how-to-recognise4">
+                          How to Recognise and Respond to
+                        </p>
+                        <p class="how-to-recognise4">Toxic Messages</p>
+                      </div>
+                    </div>
+                    <div class="date4">
+                      <div class="views4">250 views</div>
+                      <div class="article-likes">
+                        <div class="likes-indicator"></div>
+                      </div>
+                      <div class="likes4">250 likes</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blog4">
+                  <div class="article-content">
+                    <img
+                      class="unsplashbhn3wwjbfzy-icon4"
+                      alt=""
+                      src="./public/unsplashbhn3wwjbfzy3@2x.png"
+                    />
+
+                    <input
+                      class="frame-child7"
+                      placeholder="Toxic Behaviour"
+                      type="text"
+                    />
+
+                    <div class="article-actions">
+                      <div class="featherbookmark4">
+                        <img
+                          class="icon-like4"
+                          loading="lazy"
+                          alt=""
+                          src="./public/icon--like1.svg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="article-title">
+                    <div class="article-description">
+                      <h3 class="unmasking-manipulation4">
+                        Unmasking Manipulation
+                      </h3>
+                      <div class="how-to-recognise-container3">
+                        <p class="how-to-recognise4">
+                          How to Recognise and Respond to
+                        </p>
+                        <p class="how-to-recognise4">Toxic Messages</p>
+                      </div>
+                    </div>
+                    <div class="date4">
+                      <div class="views4">250 views</div>
+                      <div class="article-likes">
+                        <div class="likes-indicator"></div>
+                      </div>
+                      <div class="likes7">250 likes</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="line-container">
+              <div class="frame-child9"></div>
+              <div class="tags-container">
+                <div class="tags-list">
+                  <button class="tags">
+                    <div class="couple">All Topics</div>
+                  </button>
+                  <div class="tags1">
+                    <div class="couple1">Couples</div>
+                  </div>
+                  <div class="tags2">
+                    <div class="couple2">Toxic Behaviour</div>
+                  </div>
+                  <div class="tags2">
+                    <div class="couple3">Family Talks</div>
+                  </div>
+                  <div class="tags4">
+                    <div class="couple4">Strategy</div>
+                  </div>
+                  <div class="tags5">
+                    <div class="couple5">Manipulation</div>
+                  </div>
+                  <div class="tags5">
+                    <div class="couple5">Manipulation</div>
+                  </div>
+                </div>
+                <div class="featured-articles">
+                  <div class="featured-article-list">
+                    <div class="featured-article-preview">
+                      <div class="blog8">
+                        <img
+                          class="unsplash4wydpgych4c-icon"
+                          loading="lazy"
+                          alt=""
+                          src="./public/unsplash4wydpgych4c@2x.png"
+                        />
+
+                        <div class="featured-article-details">
+                          <div class="featured-article-content">
+                            <div class="featured-article-category">
+                              <div class="relationships6">Couples</div>
+                            </div>
+                            <div class="featured-article-actions">
+                              <div class="featured-article-engagement">
+                                <div class="views4">250 views</div>
+                                <div class="article-likes">
+                                  <div class="featured-likes-indicator"></div>
+                                </div>
+                                <div class="likes8">250 likes</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="featured-article-title">
+                            <div class="the-art-of">
+                              The Art of Reclaiming Your Voice
+                            </div>
+                            <div class="overcoming-gaslighting-in">
+                              Overcoming Gaslighting in Relationships
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="blog8">
+                        <img
+                          class="unsplash4wydpgych4c-icon"
+                          loading="lazy"
+                          alt=""
+                          src="./public/unsplash4wydpgych4c-1@2x.png"
+                        />
+
+                        <div class="featured-article-details">
+                          <div class="featured-article-content">
+                            <div class="featured-article-category">
+                              <div class="relationships6">Couples</div>
+                            </div>
+                            <div class="featured-article-actions">
+                              <div class="featured-article-engagement">
+                                <div class="views4">250 views</div>
+                                <div class="article-likes">
+                                  <div class="featured-likes-indicator"></div>
+                                </div>
+                                <div class="likes8">250 likes</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="featured-article-title">
+                            <div class="the-art-of">
+                              From Surviving to Thriving:
+                            </div>
+                            <div class="overcoming-gaslighting-in">
+                              Healing After a Toxic Relationship
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="blog8">
+                        <img
+                          class="unsplash4wydpgych4c-icon"
+                          loading="lazy"
+                          alt=""
+                          src="./public/unsplash4wydpgych4c-2@2x.png"
+                        />
+
+                        <div class="featured-article-details">
+                          <div class="featured-article-content">
+                            <div class="featured-article-category">
+                              <div class="relationships6">Couples</div>
+                            </div>
+                            <div class="featured-article-actions">
+                              <div class="featured-article-engagement">
+                                <div class="views4">250 views</div>
+                                <div class="article-likes">
+                                  <div class="featured-likes-indicator"></div>
+                                </div>
+                                <div class="likes8">250 likes</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="featured-article-title">
+                            <div class="the-art-of">
+                              Red Flags and Gut Feelings
+                            </div>
+                            <div class="overcoming-gaslighting-in">
+                              Trusting Yourself in Love and Relationships
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="blog8">
+                        <img
+                          class="unsplash4wydpgych4c-icon"
+                          loading="lazy"
+                          alt=""
+                          src="./public/unsplash4wydpgych4c-3@2x.png"
+                        />
+
+                        <div class="featured-article-details">
+                          <div class="featured-article-content">
+                            <div class="featured-article-category">
+                              <div class="relationships6">Couples</div>
+                            </div>
+                            <div class="featured-article-actions">
+                              <div class="featured-article-engagement">
+                                <div class="views4">250 views</div>
+                                <div class="article-likes">
+                                  <div class="featured-likes-indicator"></div>
+                                </div>
+                                <div class="likes8">250 likes</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="featured-article-title">
+                            <div class="the-art-of">
+                              Why It's Not Your Fault
+                            </div>
+                            <div class="overcoming-gaslighting-in">
+                              Trusting Yourself in Love and Relationships
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="article-actions-bar">
+                      <div class="button4">
+                        <img
+                          class="photobadgeplus-2-icon2"
+                          loading="lazy"
+                          alt=""
+                          src="./public/photobadgeplus-2.svg"
+                        />
+                      </div>
+                      <div class="pagination">
+                        <div class="button5">
+                          <div class="page-numbers">1</div>
+                        </div>
+                        <div class="button6">
+                          <div class="div7">2</div>
+                        </div>
+                        <div class="button7">
+                          <div class="div8">3</div>
+                        </div>
+                        <div class="button7">
+                          <div class="div8">4</div>
+                        </div>
+                        <div class="button9">
+                          <div class="current-page-label">...</div>
+                        </div>
+                        <div class="button6">
+                          <div class="div7">6</div>
+                        </div>
+                      </div>
+                      <div class="button4">
+                        <img
+                          class="photobadgeplus-2-icon2"
+                          loading="lazy"
+                          alt=""
+                          src="./public/photobadgeplus-21.svg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="blog-parent">
+                    <div class="blog8">
+                      <img
+                        class="unsplash4wydpgych4c-icon"
+                        loading="lazy"
+                        alt=""
+                        src="./public/unsplash4wydpgych4c@2x.png"
+                      />
+
+                      <div class="featured-article-details">
+                        <div class="featured-article-content">
+                          <div class="featured-article-category">
+                            <div class="relationships6">Couples</div>
+                          </div>
+                          <div class="featured-article-actions">
+                            <div class="featured-article-engagement">
+                              <div class="views4">250 views</div>
+                              <div class="article-likes">
+                                <div class="featured-likes-indicator"></div>
+                              </div>
+                              <div class="likes8">250 likes</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="featured-article-title">
+                          <div class="the-art-of">
+                            The Art of Reclaiming Your Voice
+                          </div>
+                          <div class="overcoming-gaslighting-in">
+                            Overcoming Gaslighting in Relationships
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="blog8">
+                      <img
+                        class="unsplash4wydpgych4c-icon"
+                        loading="lazy"
+                        alt=""
+                        src="./public/unsplash4wydpgych4c-1@2x.png"
+                      />
+
+                      <div class="featured-article-details">
+                        <div class="featured-article-content">
+                          <div class="featured-article-category">
+                            <div class="relationships6">Couples</div>
+                          </div>
+                          <div class="featured-article-actions">
+                            <div class="featured-article-engagement">
+                              <div class="views4">250 views</div>
+                              <div class="article-likes">
+                                <div class="featured-likes-indicator"></div>
+                              </div>
+                              <div class="likes8">250 likes</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="featured-article-title">
+                          <div class="the-art-of">
+                            From Surviving to Thriving:
+                          </div>
+                          <div class="overcoming-gaslighting-in">
+                            Healing After a Toxic Relationship
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="blog8">
+                      <img
+                        class="unsplash4wydpgych4c-icon"
+                        loading="lazy"
+                        alt=""
+                        src="./public/unsplash4wydpgych4c-2@2x.png"
+                      />
+
+                      <div class="featured-article-details">
+                        <div class="featured-article-content">
+                          <div class="featured-article-category">
+                            <div class="relationships6">Couples</div>
+                          </div>
+                          <div class="featured-article-actions">
+                            <div class="featured-article-engagement">
+                              <div class="views4">250 views</div>
+                              <div class="article-likes">
+                                <div class="featured-likes-indicator"></div>
+                              </div>
+                              <div class="likes8">250 likes</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="featured-article-title">
+                          <div class="the-art-of">
+                            Red Flags and Gut Feelings
+                          </div>
+                          <div class="overcoming-gaslighting-in">
+                            Trusting Yourself in Love and Relationships
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="blog8">
+                      <img
+                        class="unsplash4wydpgych4c-icon"
+                        loading="lazy"
+                        alt=""
+                        src="./public/unsplash4wydpgych4c-3@2x.png"
+                      />
+
+                      <div class="featured-article-details">
+                        <div class="featured-article-content">
+                          <div class="featured-article-category">
+                            <div class="relationships6">Couples</div>
+                          </div>
+                          <div class="featured-article-actions">
+                            <div class="featured-article-engagement">
+                              <div class="views4">250 views</div>
+                              <div class="article-likes">
+                                <div class="featured-likes-indicator"></div>
+                              </div>
+                              <div class="likes8">250 likes</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="featured-article-title">
+                          <div class="the-art-of">Why It's Not Your Fault</div>
+                          <div class="overcoming-gaslighting-in">
+                            Trusting Yourself in Love and Relationships
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div></div>
+      <!------------------------end of blog section-->
+      <!------------------------my profile section-->
+      <div x-cloak x-show="tab === 'my-profile'"></div>
+      <!------------------------end of my profile section-->
+      <!-----------------SETTINGS SECTION---------------->
+      <div x-cloak x-show="tab === 'settings'">Ye</div>
+      <!-----------------END OF SETTINGS SECTION------------->
+    </div>
+  </body>
+</html>
